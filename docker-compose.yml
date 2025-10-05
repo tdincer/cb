@@ -1,0 +1,19 @@
+services:
+  dev_testapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test-dev
+    volumes:
+      - ./src/:/app
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    networks:
+      - devnet
+    environment:
+      OLLAMA_URL: "http://host.docker.internal:11434"
+      
+networks:
+  devnet:
+    driver: bridge
