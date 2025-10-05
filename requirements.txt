@@ -3,4 +3,3 @@ langchain-ollama
 langchain-chroma>=0.1.2
 langchain-community
 unstructured
-torch
