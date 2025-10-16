@@ -1,0 +1,15 @@
+ipython
+llama-index==0.14.4
+llama-index-core
+llama-index-readers-file
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+llama-index-embeddings-ollama
+llama-index-llms-ollama
+llama-index-vector-stores-chroma
+llama-index-readers-web
+chromadb
+# playwright
+unstructured
+# scikit-learn
+streamlit

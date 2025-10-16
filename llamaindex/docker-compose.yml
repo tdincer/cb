@@ -1,0 +1,20 @@
+services:
+  
+  cm_llmindex_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/:/app
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    networks:
+      - devnet
+    environment:
+      OLLAMA_URL: "http://host.docker.internal:11434"
+    ports:
+      - "127.0.0.1:8501:8501"
+networks:
+  devnet:
+    driver: bridge
